@@ -1,0 +1,12 @@
+[Unit]
+Description=Spark Master
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/run-start-master.sh
+Restart=always
+RestartSec=60
+TimeoutStartSec=3
+
+[Install]
+WantedBy=multi-user.target
